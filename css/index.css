@@ -3,6 +3,9 @@
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
 }
+section{
+    background: rgba(128, 128, 128, 0.075);
+}
 
 .carousel-item{
     height: 100vh;
@@ -189,6 +192,7 @@ h1{
 #para{
     max-width: 90%;
     margin: auto;
+    font-family: 'Josefin Sans', sans-serif;
 }
 /* contact box styling 
 .contact{
@@ -322,3 +326,69 @@ margin: 30px 0;
     justify-content: space-evenly;
     
 }
+.card_cont card{
+    margin: 10px;
+}
+.sell_box{
+    margin:10%;
+}
+.sell_box img{
+    float: left;
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+}
+
+h2 span::before{
+    content: '';
+    animation: textchange infinite 8s;
+    color:teal;
+    font-family: cursive;
+}
+@keyframes textchange{
+    0%{
+        content:'Website';
+    }
+    20%{
+        content:'Market place.';
+    }
+    40%{
+        content:'sourcing.';
+    }
+    60%{
+        content:'Reverse Auction';
+    }
+    /* 80%{
+        content:'lorem';
+    } */
+    100%{
+        content: 'Selling';
+    }
+}
+.ani_h5{
+    animation:typing infinite 7s steps(22,end)  forwards,
+    blink 1s infinite;;
+            overflow: hidden;
+            white-space: nowrap;
+            font-family:sans-serif;
+            border-right: 4px solid black;
+            width: 0ch;
+            margin: auto;
+            opacity: 1;
+            animation-delay: 7s;
+}
+@keyframes typing {
+    0% { width: 0ch;
+  }
+  100%{
+      width: 27ch;
+  }
+}
+@keyframes blink {
+    100% {
+      border-right:2px solid transparent;
+    }
+    50% {
+      border-right:2px solid #222;
+    }
+  } 

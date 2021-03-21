@@ -16,19 +16,10 @@
     <title>Seller Dashboard</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400&family=Kumbh+Sans&display=swap" rel="stylesheet">
-    <link href="dashboard.css" rel="stylesheet">
     
+    <link rel="stylesheet" href="additems.css">
+    <link href="dashboard.css" rel="stylesheet">
 </head>
-<style>
-.welcome {
-  margin:5rem 25rem;border-radius: 2rem;box-shadow: 4px 1px 5px 2px #248a14;cursor:default;
-  height:10rem;width:22rem;background-color:#4cd137;text-align: center;padding:2rem 0rem;font-size: 2rem;
-}
-.welcome p{
-  display: flex
-}
-</style>
-
 <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-no,wrap p-0 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" style="color:whitesmoke">
@@ -67,7 +58,7 @@
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                        <a class="nav-link" href="sdashboard.html" >
+                            <a class="nav-link" href="sdashboard.html" >
                           <i class="fa fa-home"></i>
                           Dashboard
                         </a>
@@ -87,11 +78,16 @@
             </ul>
           </div>
         </nav>
-        
+        </div></div>
+        <div class="Add-items-form" style="margin:auto;width:25rem;margin-top:2rem">
+            <img src="img/instagram-3814061_1280.png">
+            <h1> Add Items</h1>
+            <form>
+                <input type="fname" class="add-item" placeholder="Add Items">
+                <input style="margin:1rem 5rem"type="file" id="myFile" name="filename"> 
+                <button type="button" class="btn btn-success">Add Items</button>
+            </form>
+    
         </div>
 
-      </div>
-      <div class="welcome">
-        <p>Welcome to Seller's Dashboard</p>
-      </div>
-</body></html>
+    </body></html>

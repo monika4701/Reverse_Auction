@@ -9,7 +9,7 @@ include('Buyer_Structure.php');
 ?>
  <main class="col-md mx-auto mt-2 ms-sm-auto col-lg-9 text-center">
         <div class="container text-center">
-        <h1> <b>Welcome Back <?php echo $_SESSION['uname'];?></b></h1>
+        <h1> <b>Welcome Back <i><?php echo $_SESSION['uname'];?></i></b></h1>
             <hr class="col-sm-5 mx-auto">
         </div>
         <?php
@@ -27,15 +27,19 @@ include('Buyer_Structure.php');
                   <div class="card-body">
                     <h5 class="card-title"><b><?php echo $row['name'];?></b></h5>
                     <p class="card-text"><b><?php echo $row['description']?>.</b></p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
               </div>
             </div>
           <?php            
           }}
-          else{
-            echo "No products available";
+          else{?>
+          <div class="card bg-danger">
+            <div class="card-body ">
+              <i><?php echo"No Products Available"?></i>
+            </div>
+          </div>
+         <?php
           }
         ?>
 </main>

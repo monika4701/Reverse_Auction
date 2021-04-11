@@ -28,7 +28,8 @@ include('Seller_Structure.php');
             <tbody>
             <?php
                 include('connection.php');
-                $query=mysqli_query($connection,"select * from items");
+                $uname=$_SESSION['uname'];
+                $query=mysqli_query($connection,"select * from items where seller_name='$uname'");
                 while($row=mysqli_fetch_array($query)){
             ?>
               <tr>

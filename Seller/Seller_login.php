@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
     if($query){
         if(mysqli_num_rows($query)>0){
             $_SESSION['uname']=$uname;
-            
+            header('location:Seller_Dashboard.php');
         }
         else{
             echo "<script> alert('Invalid Username or Password');</script>";

@@ -91,11 +91,6 @@
           <?php echo $row['C_Name'];?><?php } ?>
           </a>
         </li> 
-
-
-      
-
-    
       </ul>
 
     </div>

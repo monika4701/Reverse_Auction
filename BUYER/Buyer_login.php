@@ -30,7 +30,7 @@
             </div>
             
         </div>
-        <h6>New to this?<a href="Buyer_Signup.php">Sign Up</a></h6>
+        <h6>New to this?<a href="Buyer_ Signup.php">Sign Up</a></h6>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

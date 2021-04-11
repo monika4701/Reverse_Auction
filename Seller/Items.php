@@ -13,33 +13,32 @@ include('Seller_Structure.php');
             <h2><b>Items</b></h2>
             <hr class="col-sm-5 mx-auto">
         </div>
-        <div class="card mb-3 text" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img style="height:200px;width:200px"src="img/Havells-HD3152-Hair-Dryer-and-Stylers-491473361-i-1-1200Wx1200H.jpg" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img style="height:200px;width:200px"src="img/Havells-HD3152-Hair-Dryer-and-Stylers-491473361-i-1-1200Wx1200H.jpg" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-sm">
+            <thead>
+                <tr><th colspan="6"><a href="Add_Category.php" style="margin-bottom:1%"><i style="padding:0.4rem"class="fa fa-plus"></i>Add Category</a> </th></tr>   
+              <tr>
+                <th>Product</th>
+                <th>Category Name</th>
+                <th>Image</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+            <?php
+                include('connection.php');
+                $query=mysqli_query($connection,"select * from pcategories");
+                while($row=mysqli_fetch_array($query)){
+            ?>
+              <tr>
+                <td><?php echo $row['C_Name'];?></td>
+                <td> <a href="Edit_Category.php?Id=<?php echo $row['C_Id']; ?>"><i title="Edit"class="far fa-edit"></i>Edit</a></td>
+                <td> <a href="Delete_Category.php?Id=<?php echo $row['C_Id']; ?>" ><i title="Delete"class="far fa-trash"></i>Delete</a></td>
+              </tr>
+            <?php } ?>
+            </tbody>
+          </table>
         </div>
       </main>
     </div>

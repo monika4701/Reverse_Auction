@@ -13,10 +13,30 @@ include('Seller_Structure.php');
             <h2><b>Add Categories</b></h2>
             <hr class="col-sm-5 mx-auto">
         </div>
+        <?php
+            include('connection.php');
+            $id=$_GET['Id'];
+            $query="select * from pcategories where C_Id='$id'";
+            $query1=mysqli_query($connection,$query);
+            $arrdata=mysqli_fetch_array($query1);
+            $category =$arrdata['C_Name'];
+            if (isset($_POST['submit'])) {
+                    $ids=$_GET['Id'];
+                    $category =$_POST['category']; 
+                    $update="update pcategories set C_Id=$ids,C_Name='$category'  where C_Id=$ids ";
+                    $res=mysqli_query($connection,$update);
+                    if($res){
+                        echo "<script>alert('Category Updated Successfully !')</script>";
+                        echo "<script >window.location='http://localhost/Reverse_Auction/Seller/Categories.php' ;</script>";    
+                    }else{
+                        echo "<script>alert('Category Not Update')</script>";
+                    }   
+            }
+            ?>
         <form method="post" name="categoryform" onsubmit=" return validateform() ">
             <div class="form-group">
                 <label> Category:</label>
-                <input type="text" placeholder="Enter Category Name " name="category" class="form-control">
+                <input type="text" placeholder="Enter Category Name " value="<?php echo$category?>" name="category" class="form-control">
             </div>
             <input type="submit" name="submit" class="btn btn-primary" value="Add Category">
         </form>
@@ -45,21 +65,3 @@ include('Seller_Structure.php');
     -->
   </body>
 </html>
-<?php
-include('connection.php');
-if (isset($_POST['submit'])) {   
-    $category_name=$_POST['category'];
-    $query = mysqli_query($connection,"select * from pcategories where C_Name='$category_name' ");
-    if (mysqli_num_rows($query)>0) {
-        echo "<script> alert('Category Name Already Be taken !!')</script>";
-    exit();
-    }
-    $query=mysqli_query($connection,"insert into pcategories(C_Name)values('$category_name')");
-    if($query){
-        echo "<script> alert('Category Add Successfully')</script>";
-        header('location:Categories.php');
-    }else{
-        echo "<script> alert('Please try Again')</script>";
-    }
- }
-?>

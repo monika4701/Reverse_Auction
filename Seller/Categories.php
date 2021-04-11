@@ -19,8 +19,8 @@ include('Seller_Structure.php');
                 <tr><th colspan="6"><a href="Add_Category.php" style="margin-bottom:1%"><i style="padding:0.4rem"class="fa fa-plus"></i>Add Category</a> </th></tr>   
               <tr>
                 <th>Category Name</th>
-                <th>Image</th>
-                <th>Description</th>
+                <th>Edit</th>
+                <th>Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -31,8 +31,8 @@ include('Seller_Structure.php');
             ?>
               <tr>
                 <td><?php echo $row['C_Name'];?></td>
-                <td><img class="img img-thumbnail" src="img/<?php echo $row['C_Image'];?>" alt="" width="100" height="100"></td>
-                <td><?php echo $row['C_Description'];?></td>
+                <td> <a href="Edit_Category.php?Id=<?php echo $row['C_Id']; ?>"><i title="Edit"class="far fa-edit"></i>Edit</a></td>
+                <td> <a href="Delete_Category.php?Id=<?php echo $row['C_Id']; ?>" ><i title="Delete"class="far fa-trash"></i>Delete</a></td>
               </tr>
             <?php } ?>
             </tbody>

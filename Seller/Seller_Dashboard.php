@@ -7,6 +7,13 @@ header('location:Seller_login.php');
 $page='Dashboard';
 include('Seller_Structure.php');
 ?>
+ <main class="col-md mx-auto mt-2 ms-sm-auto col-lg-9 text-center">
+        <div class="container text-center">
+        <h1> <b>Welcome Back <?php echo $_SESSION['uname'];?></b></h1>
+            <hr class="col-sm-5 mx-auto">
+        </div>
+</main>
+
  <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->

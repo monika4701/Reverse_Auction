@@ -13,6 +13,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Seller Login</title>
+    
   </head>
   <body>
     <div class="container">
@@ -30,7 +31,7 @@
             </div>
             
         </div>
-        <h6>New to this?<a href="Seller_Signup.html">Sign Up</a></h6>
+        <h6>New to this?<a href="Seller_Signup.php">Sign Up</a></h6>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

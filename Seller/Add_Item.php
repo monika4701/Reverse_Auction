@@ -61,7 +61,8 @@ if(isset($_POST['submit'])){
     $category_name=$_POST['category'];
     $description=$_POST['description'];
     $img=$_POST['img'];
-    $query=mysqli_query($connection,"Insert into items (name,description,C_Name,img_fname) values('$item_name','$description','$category_name','$img')");
+    $seller_name=$_SESSION['uname'];
+    $query=mysqli_query($connection,"Insert into items (name,description,C_Name,img_fname,seller_name) values('$item_name','$description','$category_name','$img','$seller_name')");
 
     if($query){
         echo "<script> alert('Added Successfully')</script>";

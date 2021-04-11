@@ -34,8 +34,13 @@ include('Buyer_Structure.php');
             </div>
           <?php            
           }}
-          else{
-            echo "No products available";
+          else{?>
+          <div class="card bg-danger">
+              <div class="card-body">
+                <i><?php echo"No Products Available"?></i>
+              </div>
+          </div>
+        <?php
           }
         ?>
 </main>

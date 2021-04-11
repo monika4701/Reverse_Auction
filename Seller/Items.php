@@ -15,9 +15,9 @@ include('Seller_Structure.php');
         </div>
         <div class="table-responsive">
           <table class="table table-bordered table-striped table-sm">
-            <thead>
-                <tr><th colspan="6"><a href="Add_Item.php" style="margin-bottom:1%"><i style="padding:0.4rem"class="fa fa-plus"></i>Add Category</a> </th></tr>   
-              <tr>
+            <thead class="table-dark">
+                <tr><th colspan="6"><a href="Add_Item.php" style="margin-bottom:1%"><i style="padding:0.4rem"class="fa fa-plus"></i>Add Item</a> </th></tr>   
+              <tr class="">
                 <th>Product</th>
                 <th>Category Name</th>
                 <th>Image</th>
@@ -28,13 +28,15 @@ include('Seller_Structure.php');
             <tbody>
             <?php
                 include('connection.php');
-                $query=mysqli_query($connection,"select * from pcategories");
+                $query=mysqli_query($connection,"select * from items");
                 while($row=mysqli_fetch_array($query)){
             ?>
               <tr>
+              <td><?php echo "Name : ".$row['name'];?><br><?php echo "Description : ".$row['description'];?></td>
                 <td><?php echo $row['C_Name'];?></td>
-                <td> <a href="Edit_Category.php?Id=<?php echo $row['C_Id']; ?>"><i title="Edit"class="far fa-edit"></i>Edit</a></td>
-                <td> <a href="Delete_Category.php?Id=<?php echo $row['C_Id']; ?>" ><i title="Delete"class="far fa-trash"></i>Delete</a></td>
+                <td><img height="101" width="101" src="../img/<?php echo $row['img_fname']?>"></td>
+                <td> <a href="Edit_Item.php?Id=<?php echo $row['id']; ?>"><i title="Edit"class="far fa-edit"></i>Edit</a></td>
+                <td> <a href="Delete_Item.php?Id=<?php echo $row['id']; ?>" ><i title="Delete"class="far fa-trash"></i>Delete</a></td>
               </tr>
             <?php } ?>
             </tbody>

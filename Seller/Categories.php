@@ -15,7 +15,7 @@ include('Seller_Structure.php');
         </div>
         <div class="table-responsive">
           <table class="table table-bordered table-striped table-sm">
-            <thead>
+            <thead class="table-dark">
                 <tr><th colspan="6"><a href="Add_Category.php" style="margin-bottom:1%"><i style="padding:0.4rem"class="fa fa-plus"></i>Add Category</a> </th></tr>   
               <tr>
                 <th>Category Name</th>

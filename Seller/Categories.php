@@ -31,8 +31,8 @@ include('Seller_Structure.php');
             ?>
               <tr>
                 <td><?php echo $row['C_Name'];?></td>
-                <td> <a href="Edit_Category.php?Id=<?php echo $row['C_Id']; ?>"><i title="Edit"class="far fa-edit"></i>Edit</a></td>
-                <td> <a href="Delete_Category.php?Id=<?php echo $row['C_Id']; ?>" ><i title="Delete"class="far fa-trash"></i>Delete</a></td>
+                <td> <b><a style="color:#2ecc71"href="Edit_Category.php?Id=<?php echo $row['C_Id']; ?>"><i title="Edit"class="far fa-edit"></i>Edit</a></b></td>
+                <td> <b><a style="color:#e74c3c"href="Delete_Category.php?Id=<?php echo $row['C_Id']; ?>" ><i title="Delete"class="far fa-trash"></i>Delete</a></b></td>
               </tr>
             <?php } ?>
             </tbody>

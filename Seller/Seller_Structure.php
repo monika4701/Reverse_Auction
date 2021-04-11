@@ -48,6 +48,15 @@
     body{
       font-family: 'Mukta', sans-serif;
     }
+    a{
+      text-decoration: none;
+    }
+    td a .fa-edit{
+      color: #2ecc71;
+    }
+    td a .fa-trash{
+      color: #e74c3c;
+    }
   </style>
   <body>
       <header class="p-3 mb-0 border-bottom bg-light">

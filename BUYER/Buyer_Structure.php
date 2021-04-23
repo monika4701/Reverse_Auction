@@ -47,6 +47,7 @@
     body{
       font-family: 'Mukta', sans-serif;
     }
+    
   </style>
   <body>
       <header class="p-3 mb-0 border-bottom bg-light">
@@ -86,8 +87,8 @@
        include('connection.php');
        $query=mysqli_query($connection,"select * from pcategories");
        while($row=mysqli_fetch_array($query)){?>
-        <li class="nav-item  my-3">
-          <a class="nav-link" aria-current="page" <?php if($page==$row['C_Name']) echo"active"?>href="Buyer_Dashboard.php?C_Name=<?php echo $row['C_Name'];?>">
+        <li class="nav-item ">
+          <a class="nav-link my-3 " aria-current="page" href="Buyer_Dashboard.php?C_Name=<?php echo $row['C_Name'];?>">
           <?php echo $row['C_Name'];?><?php } ?>
           </a>
         </li> 

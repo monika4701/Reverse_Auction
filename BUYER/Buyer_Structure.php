@@ -84,7 +84,7 @@
     <div class="2pt-3">
       <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item ">
-          <a class="nav-link my-3 " aria-current="page" href="Buyer_Dashboard.php?C_Name=none">
+          <a class="nav-link my-3 <?php if($page=='none'){echo 'active';} ?>" aria-current="page" href="Buyer_Dashboard.php?C_Name=none">
           All
           </a>
         </li> 
@@ -93,16 +93,11 @@
        $query=mysqli_query($connection,"select * from pcategories");
        while($row=mysqli_fetch_array($query)){?>
         <li class="nav-item ">
-          <a class="nav-link my-3 " aria-current="page" href="Buyer_Dashboard.php?C_Name=<?php echo $row['C_Name'];?>">
-          <?php echo $row['C_Name'];?><?php } ?>
+          <a class="nav-link my-1 <?php if($page==$row['C_Name']){echo 'active';} ?>" aria-current="page" href="Buyer_Dashboard.php?C_Name=<?php echo $row['C_Name'];?>">
+          <?php echo $row['C_Name'];?>
           </a>
         </li> 
-
-
-      
-
-    
+        <?php } ?>
       </ul>
-
     </div>
   </nav>

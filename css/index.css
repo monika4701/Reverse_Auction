@@ -75,7 +75,7 @@ section{
 .slide-two{
     background: #f7f7f7;
 }
-.slide-two h1,.slide-two p{
+.slide-two h2,.slide-two p{
     color: #feb154;
 }
 .img-one{
@@ -190,7 +190,7 @@ h1{
     margin: 20px;
 }
 #para{
-    max-width: 90%;
+    max-width: 70%;
     margin: auto;
 
 

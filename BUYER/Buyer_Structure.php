@@ -83,6 +83,11 @@
   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar text-center collapse">
     <div class="2pt-3">
       <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item ">
+          <a class="nav-link my-3 " aria-current="page" href="Buyer_Dashboard.php?C_Name=none">
+          All
+          </a>
+        </li> 
       <?php
        include('connection.php');
        $query=mysqli_query($connection,"select * from pcategories");

@@ -162,8 +162,19 @@ include('Buyer_Structure.php');
   if(isset($_POST['submit'])){
     $bid=$_POST['bid_amount'];
     $id=$_POST['id'];
+    $uname=$_SESSION['uname'];
     if($bid>0){
-      echo "<script >window.location='http://localhost/Reverse_Auction/BUYER/Bid.php?id=$id' ;</script>";
+
+      $check=mysqli_query($connection,"Select * from bids where product_id =$id and uname='$uname'");
+      if(mysqli_num_rows($check)>0){
+        echo "<script> alert('Your bid already placed')</script>";
+      }
+      else{
+      $query=mysqli_query($connection,"INSERT INTO `bids`(`product_id`, `bid_amount`,`uname`) VALUES ($id,$bid,'$uname')");
+      if($query){
+        echo "<script> alert('Bid Placed')</script>";
+      }
+    }
     }
     else{
       echo "<script> alert('Please Fill the bid amount')</script>";

@@ -117,10 +117,15 @@ include('Buyer_Structure.php');
                                 <h5 class="card-title"><b>Name: </b><?php echo $row['name'];?></h5>
                                 <p class="card-text"><b>Category: </b><?php echo $row['C_Name'];?></p>
                                 <p class="card-text"><b>Description: </b><?php echo $row['description'];?></p>
-                                
+                                <p class="card-text"><b>Highest Bid: </b>
+                                <?php 
+                                  $id=$row['id'];
+                                  $bid=mysqli_query($connection,"select max(bid_amount) from bids where product_id=$id");
+                                  $highest_bid=mysqli_fetch_array($bid);
+                                echo $highest_bid['0'];?></p>
                                 <div class="form-group">
                                   <label for="" class="control-label"><b>Bid Amount</b></label>
-                                  <input type="number" class="form-control text-right" name="bid_amount" >
+                                  <input type="number" min=0 max=<?php echo $highest_bid['0'];?>  class="form-control text-right" name="bid_amount" >
                                 </div>
                               </div>
                               </div>

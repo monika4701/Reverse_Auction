@@ -35,7 +35,7 @@ include('Seller_Structure.php');
                 $update="update items set id=$id,name='$item_name',C_Name='$category_name',description='$description',img_fname='$img' WHERE id=$id";
                 $res=mysqli_query($connection,$update);
                 if ($res) {
-                    echo "<script>alert('News update Successfully !!')</script>  ";
+                    echo "<script>alert('Item updated Successfully !!')</script>  ";
                     echo "<script >window.location='http://localhost/Reverse_Auction/Seller/Items.php' ;</script>";
                 } else{
                     echo "<script>alert('Please try again !!')</script>  ";

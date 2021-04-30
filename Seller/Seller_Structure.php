@@ -57,6 +57,42 @@
     td a .fa-trash{
       color: #e74c3c;
     }
+    
+    header{
+      background-image: radial-gradient(#18dcff 5%, #3498db 105%,#2980b9  10%);
+
+
+    }
+    nav{
+      background-color:
+    }
+      
+      a {color:black}
+      a:hover{
+        color:white
+      }
+         li {
+
+            margin: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: black;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          li:hover {
+            background-position: right center;background-color:skyblue;color:white;            text-decoration: none;
+          }        
+          table thead{
+            background-color:#20bf6b
+          }
+          .fa-trash{
+            color:#e74c3c
+          }
   </style>
   <body>
       <header class="p-3 mb-0 border-bottom bg-light">

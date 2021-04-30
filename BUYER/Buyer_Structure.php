@@ -18,8 +18,6 @@
 <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <!-- font family -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="Categories.css">
 <!-- /font-family -->
     <title>Buyer</title>
@@ -45,9 +43,44 @@
     padding:0;margin:0;
     }
     body{
-      font-family: 'Mukta', sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
     
+    header{
+      background-image: radial-gradient(#18dcff 5%, #3498db 105%,#2980b9  10%);
+
+
+    }
+    nav{
+      background-color:
+    }
+      
+      a {color:black}
+      a:hover{
+        color:white
+      }
+         li {
+
+            margin: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: black;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          li:hover {
+            background-position: right center;background-color:skyblue;color:white;            text-decoration: none;
+          }        
+          table thead{
+            background-color:#20bf6b
+          }
+          .fa-trash{
+            color:#e74c3c
+          }
   </style>
   <body>
       <header class="p-3 mb-0 border-bottom bg-light">

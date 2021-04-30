@@ -7,7 +7,7 @@ header('location:Buyer_login.php');
 $page=$_GET['C_Name'];
 include('Buyer_Structure.php');
 ?>
- <main class="col-md mx-auto mt-2 ms-sm-auto col-lg-9 text-center">
+ <main class="col-md mx-auto mt-2 ms-sm-auto col-lg-9">
         <div class="container text-center">
         <h1> <b>Welcome Back <i><?php echo $_SESSION['uname'];?></i></b></h1>
             <hr class="col-sm-5 mx-auto">
@@ -49,6 +49,10 @@ include('Buyer_Structure.php');
                                 <h5 class="card-title"><b>Name: </b><?php echo $row['name'];?></h5>
                                 <p class="card-text"><b>Category: </b><?php echo $row['C_Name'];?></p>
                                 <p class="card-text"><b>Description: </b><?php echo $row['description'];?></p>
+                                <div class="form-group">
+                                  <label for="" class="control-label"><b>Bid Amount</b></label>
+                                  <input type="number" class="form-control text-right" name="bid_amount" >
+                                </div>
                               </div>
                               </div>
                               <div class="modal-footer">

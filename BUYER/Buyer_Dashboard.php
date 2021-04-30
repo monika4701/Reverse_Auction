@@ -43,12 +43,15 @@ include('Buyer_Structure.php');
                               </div>
                               <div class="modal-body">
                               <div class="card-body">
+                              <form method="post">
                               <div class="container-sm">
                                 <img src="../img/<?php echo $row['img_fname']?>" class="img-thumbnail" alt="...">
                               </div>
+                              <input type="number" style="display:none"class="form-control text-right" name="id" value="<?php echo $row['id']?>">
                                 <h5 class="card-title"><b>Name: </b><?php echo $row['name'];?></h5>
                                 <p class="card-text"><b>Category: </b><?php echo $row['C_Name'];?></p>
                                 <p class="card-text"><b>Description: </b><?php echo $row['description'];?></p>
+                                
                                 <div class="form-group">
                                   <label for="" class="control-label"><b>Bid Amount</b></label>
                                   <input type="number" class="form-control text-right" name="bid_amount" >
@@ -57,8 +60,9 @@ include('Buyer_Structure.php');
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success">Bid</button>
+                                <button type="submit" name="submit"class="btn btn-success">Bid</button>
                               </div>
+                              </form>
                             </div>
                           </div>
                         </div>
@@ -153,3 +157,16 @@ include('Buyer_Structure.php');
   -->
 </body>
 </html>
+<?php
+  include('connection.php');
+  if(isset($_POST['submit'])){
+    $bid=$_POST['bid_amount'];
+    $id=$_POST['id'];
+    if($bid>0){
+      echo "<script >window.location='http://localhost/Reverse_Auction/BUYER/Bid.php?id=$id' ;</script>";
+    }
+    else{
+      echo "<script> alert('Please Fill the bid amount')</script>";
+    }
+  }
+?>

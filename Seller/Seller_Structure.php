@@ -146,6 +146,12 @@
             Categories
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link <?php if($page=='Bids'){echo 'active';} ?>" aria-current="page" href="Bids.php">
+            <span data-feather="file"></span>
+            Bids
+          </a>
+        </li>
       </ul>
 
     </div>

@@ -36,8 +36,8 @@ include('Seller_Structure.php');
               <td><?php echo "Name : ".$row['name'];?><br><?php echo "Description : ".$row['description'];?></td>
                 <td><?php echo $row['C_Name'];?></td>
                 <td><img height="101" width="101" src="../img/<?php echo $row['img_fname']?>"></td>
-                <td><b><a style="color:#2ecc71" href="Edit_Item.php?Id=<?php echo $row['id']; ?>"><i title="Edit"class="far fa-edit"></i>Edit</a></b></td>
-                <td><b><a style="color:#e74c3c" href="Delete_Item.php?Id=<?php echo $row['id']; ?>" ><i title="Delete"class="far fa-trash"></i>Delete</a></b></td>
+                <td><button class="btn btn-dar"><b><a style="color:#2ecc71" href="Edit_Item.php?Id=<?php echo $row['id']; ?>"><i title="Edit"class="far fa-edit"></i></a></b></button></td>
+                <td><button class="btn btn-dar"><b><a style="color:#e74c3c" href="Delete_Item.php?Id=<?php echo $row['id']; ?>" ><i title="Delete"class="far fa-trash"></i></a></b></button></td>
               </tr>
             <?php } ?>
             </tbody>

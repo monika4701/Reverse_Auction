@@ -36,7 +36,7 @@ include('Seller_Structure.php');
                 $res=mysqli_query($connection,$update);
                 if ($res) {
                     echo "<script>alert('Item updated Successfully !!')</script>  ";
-                    echo "<script >window.location='http://localhost/Reverse_Auction/Seller/Items.php' ;</script>";
+                    echo "<script >window.location='http://localhost:8080/Reverse_Auction/Seller/Items.php' ;</script>";
                 } else{
                     echo "<script>alert('Please try again !!')</script>  ";
                 }

@@ -51,7 +51,7 @@ include('Buyer_Structure.php');
                                 <h5 class="card-title"><b>Name: </b><?php echo $row['name'];?></h5>
                                 <p class="card-text"><b>Category: </b><?php echo $row['C_Name'];?></p>
                                 <p class="card-text"><b>Description: </b><?php echo $row['description'];?></p>
-                                <p class="card-text"><b>Highest Bid: </b>
+                                <p class="card-text"><b>Highest Bid is: </b>
                                 <?php 
                                   $id=$row['id'];
                                   $bid=mysqli_query($connection,"select max(bid_amount) from bids where product_id=$id");
